@@ -10,9 +10,10 @@ public class Cheers {
 
                 char chr = crowdupper.charAt(i);
 
-                //boolean IsAn = false;
-               // IsAn = (crowdupper.indexOf('A')==i || crowdupper.indexOf('E')==i || crowdupper.indexOf('F')==i || crowdupper.indexOf('H')==i || crowdupper.indexOf('I')==i || crowdupper.indexOf('L')==i || crowdupper.indexOf('M')==i|| crowdupper.indexOf('N')==i || crowdupper.indexOf('O')==i || crowdupper.indexOf('R')==i || crowdupper.indexOf('S')==i || crowdupper.indexOf('X')==i) ;
-                if ("AEFHILMNORSX".indexOf(chr)!= -1) {System.out.println("an "+ crowdupper.charAt(i) + ": "+ crowdupper.charAt(i) + "!");}
+                boolean IsAn = false;
+                IsAn = (crowdupper.charAt(i) =='A' || crowdupper.charAt(i)=='E' || crowdupper.charAt(i)=='F' || crowdupper.charAt(i)=='H' || crowdupper.charAt(i)=='I' || crowdupper.charAt(i)=='L' || crowdupper.charAt(i)=='M'|| crowdupper.charAt(i)=='N' || crowdupper.charAt(i)=='O' || crowdupper.charAt(i)=='R' || crowdupper.charAt(i)=='S' || crowdupper.charAt(i)=='X') ;
+                //if ("AEFHILMNORSX".indexOf(chr)!= -1)
+                if (IsAn) {System.out.println("an "+ crowdupper.charAt(i) + ": "+ crowdupper.charAt(i) + "!");}
                 else {System.out.println("a  "+ crowdupper.charAt(i) + ": "+ crowdupper.charAt(i) + "!");}
             }
             System.out.println("What does that spell?");
