@@ -2,5 +2,24 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
+		int NumRuns = Integer.parseInt(args[0]);
+		int above = 0;
+		int under = 0;
+
+		for(int i=0; i<NumRuns;i++){
+			if (Math.random()>0.5) above++;
+			else under++;
+		}
+		if (above!=0 && under!=0){
+		 double ratio = (double) Math.min(above, under)/Math.max(above, under);
+		System.out.println("> 0.5: "+ above + " times" );
+		System.out.println(">= 0.5: "+ under + " times" );
+		System.out.println("Ratio: "+ ratio);}
+		else{
+		System.out.println("> 0.5: "+ above + " times" );
+		System.out.println(">= 0.5: "+ under + " times" );
+		}
+
+
 	}
 }
