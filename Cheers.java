@@ -7,9 +7,6 @@ public class Cheers {
             int length = crowdupper.length();
             for (int i=0; i<length; i++){
                 System.out.print("Give me ");
-
-                char chr = crowdupper.charAt(i);
-
                 boolean IsAn = false;
                 IsAn = (crowdupper.charAt(i) =='A' || crowdupper.charAt(i)=='E' || crowdupper.charAt(i)=='F' || crowdupper.charAt(i)=='H' || crowdupper.charAt(i)=='I' || crowdupper.charAt(i)=='L' || crowdupper.charAt(i)=='M'|| crowdupper.charAt(i)=='N' || crowdupper.charAt(i)=='O' || crowdupper.charAt(i)=='R' || crowdupper.charAt(i)=='S' || crowdupper.charAt(i)=='X') ;
                 if (IsAn) {System.out.println("an "+ crowdupper.charAt(i) + ": "+ crowdupper.charAt(i) + "!");}
