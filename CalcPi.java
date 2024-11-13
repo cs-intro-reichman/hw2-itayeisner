@@ -1,6 +1,19 @@
 // Computes an approximation of PI.
 public class CalcPi {
 	public static void main(String [] args) { 
-	    // Replace this comment with your code
+		// מקדם הדיוק
+		int NumTerms = Integer.parseInt(args[0]);
+		int p=1; // מקדם השבר
+		//calc Pi
+		double AproxPi = 0;
+		for(int i=0;i<NumTerms;i++){
+			if (i%2==0) AproxPi += (double)1/p;
+			else AproxPi -= (double)1/p;
+			p+=2;
+		}
+		AproxPi *= 4;
+
+		System.out.println("pi according to java: " + Math.PI);
+		System.out.println("pi, approximated: " + AproxPi);
 	}
 }
