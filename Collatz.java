@@ -4,37 +4,33 @@ public class Collatz {
 	    // Replace this comment with your code
 		int N = Integer.parseInt(args[0]);
 		String mode = args[1]; 
-		int seed = 1 ;
 		int NextNum = 0;
 		int steps = 1;
 		boolean first = true;
 		for (int i=0; i<N;i++){
+			NextNum = i+1;
 			// V - all of the sequences from 1 to N
-			if ( mode.equals("v")){
-				System.out.print(seed + " ");
-				NextNum = seed;
+			if ( mode.equals("v")) {System.out.print((i+1) + " ");}
 			while(NextNum!=1 || first){
-				if (first) {first = false;}
+				if (first) first = false;
 				if (NextNum%2==0) {NextNum = NextNum/2;}
 				else {NextNum = NextNum*3 +1;}
-				System.out.print(NextNum + " ");
+				if ( mode.equals("v")) {System.out.print(NextNum + " ");}
 				steps++;
 				}
-			System.out.println( "(" + steps + ")");
+				if ( mode.equals("v")) {System.out.println( "(" + steps + ")");}
 			steps = 1;
-			}
-			// C - sum of verified sequences from 1 to N
+			
+			/* C - sum of verified sequences from 1 to N
 			if ( mode.equals("c")){
-				NextNum = seed;
 			while(NextNum!=1 || first){
-				if (first) {first = false;}
+				if (first) first = false;
 				if (NextNum%2==0) {NextNum = NextNum/2;}
 				else {NextNum = NextNum*3 +1;}
 				}
-			}
-			seed++;
+			}*/
 		} 
-		System.out.println("Every one of the first "+ N + " hailstone sequences reached 1.");
+		System.out.println ("Every one of the first "+ N + " hailstone sequences reached 1.");
 
 	}
 }
