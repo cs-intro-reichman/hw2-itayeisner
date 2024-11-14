@@ -4,8 +4,8 @@ public class Cheers {
 	    // Replace this comment with your code
             String crowdinput = args[0];
             String crowdupper = crowdinput.toUpperCase();
-            int length = crowdupper.length();
-            for (int i=0; i<length; i++){
+            //int length = crowdupper.length();
+            for (int i=0; i<crowdupper.length(); i++){
                 System.out.print("Give me ");
                 boolean IsAn = false;
                 IsAn = (crowdupper.charAt(i) =='A' || crowdupper.charAt(i)=='E' || crowdupper.charAt(i)=='F' || crowdupper.charAt(i)=='H' || crowdupper.charAt(i)=='I' || crowdupper.charAt(i)=='L' || crowdupper.charAt(i)=='M'|| crowdupper.charAt(i)=='N' || crowdupper.charAt(i)=='O' || crowdupper.charAt(i)=='R' || crowdupper.charAt(i)=='S' || crowdupper.charAt(i)=='X') ;
